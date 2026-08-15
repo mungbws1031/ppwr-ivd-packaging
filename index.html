@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
+<title>EU PPWR 2025/40 — IVD 포장 적용·면제 지도</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"/>
+<style>
+:root{
+  color-scheme:light only;
+  --red:#E60044;
+  --red-pale:#FFDDE7;
+  --red-deep:#B00035;
+  --ink:#101114;
+  --gray:#727171;
+  --mute:#F1F0EC;
+  --rule:#D9D8D2;
+  --sans:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:var(--sans);
+  font-size:16px;line-height:1.55;letter-spacing:0}
+.mono{font-family:var(--mono);font-variant-ligatures:none}
+.band{padding-left:var(--pad);padding-right:var(--pad)}
+.inner{max-width:1200px;margin:0 auto}
+
+/* ================= HERO ================= */
+.hero{background:var(--red);color:#fff!important;padding-top:clamp(44px,7vw,84px);padding-bottom:clamp(40px,6vw,72px);
+  position:relative;overflow:hidden}
+.hero::after{content:"2025/40";position:absolute;right:-.04em;bottom:-.42em;font-family:var(--mono);
+  font-weight:800;font-size:clamp(140px,24vw,360px);color:rgba(255,255,255,.08);letter-spacing:-.02em;
+  pointer-events:none;line-height:1;z-index:0}
+.hero .inner{position:relative;z-index:1}
+.kicker{font-family:var(--mono);font-size:clamp(11px,1.2vw,13px);font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;color:#fff}
+.kicker b{background:#fff;color:var(--red);padding:3px 9px;font-weight:800;letter-spacing:.1em}
+h1{font-size:clamp(40px,8.4vw,104px);line-height:1.14;font-weight:800;letter-spacing:-.015em;
+  margin:clamp(18px,3vw,30px) 0 0;max-width:15ch;text-wrap:balance}
+h1 u{text-decoration:none;-webkit-text-decoration:none;background:var(--ink);color:#fff!important;
+  padding:.1em .16em .14em;display:inline-block;line-height:1.28;
+  box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.thesis{margin:clamp(20px,3vw,30px) 0 0;max-width:60ch;font-size:clamp(15.5px,1.75vw,20px);
+  line-height:1.62;color:#fff}
+.thesis b{background:rgba(255,255,255,.2);padding:1px 5px;font-weight:700}
+
+/* ================= STATS ================= */
+.stats{background:var(--ink);color:#fff!important;padding-top:0;padding-bottom:0}
+.stats .inner{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:clamp(20px,3vw,30px) clamp(14px,2vw,26px) clamp(22px,3vw,32px) 0;
+  border-right:1px solid rgba(255,255,255,.16)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-family:var(--mono);font-weight:800;letter-spacing:-.02em;
+  font-size:clamp(20px,3.6vw,40px);line-height:1.15}
+.stat.hot b{color:var(--red)}
+.stat small{display:block;font-size:clamp(11px,1.15vw,13px);color:#9EA1A9;margin-top:10px;line-height:1.45}
+
+/* ================= SECTION ================= */
+section{padding-top:clamp(52px,7vw,96px)}
+.sechead{display:flex;align-items:flex-start;gap:clamp(12px,2vw,22px);border-top:4px solid var(--ink);padding-top:16px}
+.secnum{font-family:var(--mono);font-size:clamp(13px,1.6vw,17px);font-weight:800;color:var(--red);
+  letter-spacing:-.02em;padding-top:.34em;flex:none}
+h2{font-size:clamp(26px,4.4vw,48px);font-weight:800;letter-spacing:-.015em;margin:0;line-height:1.22}
+.sublede{color:#4C4F57;font-size:clamp(14px,1.5vw,16.5px);margin:14px 0 0;max-width:66ch;line-height:1.6}
+
+/* ================= LAYER FIGURE ================= */
+.layerfig{margin-top:clamp(24px,3.5vw,36px);border:3px solid var(--ink);padding:clamp(14px,2vw,22px) clamp(14px,2vw,22px) clamp(18px,2.4vw,26px)}
+.layerfig svg{display:block;width:100%;height:auto}
+.layerfig figcaption{font-size:clamp(12.5px,1.35vw,14px);color:#4C4F57;line-height:1.65;margin-top:clamp(12px,1.8vw,18px);
+  border-top:1px solid var(--rule);padding-top:12px;max-width:78ch}
+.layerfig figcaption b{color:var(--ink);font-weight:700}
+
+/* ================= SIGNATURE: LOAD ================= */
+.load{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(10px,1.6vw,20px);margin-top:clamp(26px,4vw,40px)}
+.lp{border:3px solid var(--ink);padding:clamp(16px,2.2vw,26px);display:flex;flex-direction:column;
+  background:#fff;position:relative}
+.lp.l2{background:#FFF4F7}
+.lp.l3{background:var(--red);border-color:var(--red);color:#fff!important}
+.lp .tier{font-family:var(--mono);font-size:clamp(10px,1.1vw,12px);font-weight:700;letter-spacing:.14em}
+.lp .name{font-size:clamp(15px,2vw,22px);font-weight:800;letter-spacing:-.01em;margin-top:6px;line-height:1.3}
+.lp .what{font-size:clamp(11px,1.15vw,13px);color:var(--gray);margin-top:6px;line-height:1.4}
+.lp.l3 .what{color:#fff}
+.lp .score{font-family:var(--mono);font-weight:800;letter-spacing:-.02em;line-height:1.05;
+  font-size:clamp(56px,12vw,120px);margin-top:clamp(14px,2vw,22px)}
+.lp .score s{text-decoration:none;font-size:.32em;letter-spacing:0;color:var(--gray);margin-left:.12em;vertical-align:.3em}
+.lp.l3 .score s{color:#fff}
+.lp.l1 .score{color:var(--ink)}
+.lp.l2 .score{color:var(--red)}
+.lp .lbl{font-size:clamp(11px,1.2vw,13px);font-weight:700;margin-top:8px;color:var(--gray)}
+.lp.l3 .lbl{color:#fff}
+.bar{height:10px;background:var(--mute);margin-top:14px;display:flex;overflow:hidden}
+.lp.l3 .bar{background:rgba(255,255,255,.25)}
+.bar i{display:block;height:100%;transform-origin:left;transform:scaleX(0);animation:grow .9s cubic-bezier(.2,.7,.2,1) forwards}
+.bar .fa{background:var(--red)}
+.lp.l3 .bar .fa{background:#fff}
+.bar .fc{background:var(--red-pale)}
+.lp.l3 .bar .fc{background:rgba(255,255,255,.55)}
+@keyframes grow{to{transform:scaleX(1)}}
+.lp .note{font-size:clamp(11.5px,1.25vw,13.5px);margin-top:14px;line-height:1.5;
+  border-top:1px solid var(--rule);padding-top:12px}
+.lp.l3 .note{border-color:rgba(255,255,255,.35)}
+
+/* ================= MATRIX ================= */
+.legend{display:flex;flex-wrap:wrap;gap:8px 20px;margin:clamp(26px,4vw,40px) 0 14px;font-size:13px;font-weight:600}
+.legend span{display:flex;align-items:center;gap:7px}
+.legend i{width:16px;height:16px;flex:none}
+.lg-a{background:var(--red)}
+.lg-cd{background:var(--red-pale);border-left:4px solid var(--red)}
+.lg-e{background:#fff;border:2px solid var(--ink)}
+.lg-n{background:var(--mute)}
+
+.mx{width:100%;border-collapse:collapse;border:3px solid var(--ink)}
+.mx th,.mx td{text-align:left;vertical-align:top;border:1px solid var(--rule)}
+.mx thead th{background:var(--ink);color:#fff!important;
+  padding:12px 14px;border-color:#2A2C33}
+.mx thead th .h{font-size:clamp(13px,1.6vw,18px);font-weight:800;letter-spacing:-.01em;line-height:1.3}
+.mx thead th .s{display:block;font-family:var(--mono);font-size:10.5px;color:#9EA1A9;margin-top:4px;font-weight:400;letter-spacing:0}
+.mx thead th.hot .h{color:#fff}
+.mx thead th.hot{background:var(--red);border-color:#C4003A}
+.mx td{padding:12px 14px}
+.duty{width:30%;min-width:160px;background:#FAFAF8}
+.duty b{display:block;font-size:clamp(14px,1.6vw,17px);font-weight:800;letter-spacing:-.008em;line-height:1.38}
+.duty .art{font-family:var(--mono);font-size:11px;color:var(--gray);display:block;margin-top:5px}
+.duty .when{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:700;
+  background:var(--ink);color:#fff!important;padding:2px 7px;margin-top:8px}
+.duty .when.soon{background:var(--red)}
+
+.c{width:23.3%}
+.c.a{background:var(--red);color:#fff!important}
+.c.cd{background:var(--red-pale);box-shadow:inset 5px 0 0 var(--red)}
+.c.e{background:#fff}
+.c.n{background:var(--mute)}
+.v{font-size:clamp(14px,1.7vw,19px);font-weight:800;letter-spacing:-.008em;display:block;line-height:1.3}
+.c.e .v{border-bottom:3px solid var(--ink);display:inline-block;padding-bottom:2px}
+.c.n .v{color:#8C8B85}
+.nt{font-size:12.5px;margin-top:9px;line-height:1.5;color:#4C4F57}
+.c.a .nt{color:#fff}
+.c.n .nt{color:#8C8B85}
+.mx tbody tr:hover .c.e,.mx tbody tr:hover .duty{background:#FFF7F9}
+
+/* ================= TIMELINE ================= */
+.rail{margin-top:clamp(26px,4vw,40px);border-top:4px solid var(--ink);display:grid;
+  grid-template-columns:repeat(6,1fr)}
+.mk{padding:20px 14px 24px 0;position:relative}
+.mk::before{content:"";position:absolute;top:-4px;left:0;height:4px;width:100%;background:transparent}
+.mk.hot::before{background:var(--red)}
+.mk .d{font-family:var(--mono);font-weight:800;letter-spacing:-.015em;font-size:clamp(13px,1.6vw,18px);display:block;line-height:1.3}
+.mk.hot .d{color:var(--red);font-size:clamp(15px,2.1vw,24px);line-height:1.25}
+.mk .l{font-size:clamp(11.5px,1.25vw,13.5px);color:#4C4F57;margin-top:9px;line-height:1.5}
+.mk.hot .l{color:var(--ink);font-weight:600}
+
+/* ================= MYTH CARDS ================= */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:clamp(10px,1.6vw,18px);
+  margin-top:clamp(26px,4vw,40px)}
+.card{border:3px solid var(--ink);padding:clamp(18px,2.2vw,26px);display:flex;flex-direction:column}
+.card .x{font-family:var(--mono);font-size:34px;font-weight:800;color:var(--red);line-height:1}
+.card .myth{margin-top:10px;font-size:clamp(14px,1.6vw,16px);font-weight:700;color:var(--gray);
+  text-decoration:line-through;text-decoration-color:var(--red);text-decoration-thickness:3px}
+.card .fact{margin-top:14px;font-size:clamp(16px,2vw,21px);font-weight:800;letter-spacing:-.01em;line-height:1.42}
+.card p{margin:12px 0 0;font-size:13.5px;color:#4C4F57;line-height:1.6}
+.card .src{margin-top:auto;padding-top:16px;font-family:var(--mono);font-size:11px;font-weight:700;color:var(--red)}
+
+/* ================= ACTIONS ================= */
+.acts{margin-top:clamp(26px,4vw,40px);border-top:4px solid var(--ink)}
+.act{display:grid;grid-template-columns:clamp(52px,7vw,86px) 1fr auto;gap:clamp(12px,2vw,24px);
+  align-items:start;padding:clamp(16px,2.2vw,24px) 0;border-bottom:1px solid var(--rule)}
+.act .k{font-family:var(--mono);font-size:clamp(18px,3vw,34px);font-weight:800;color:var(--red);
+  letter-spacing:-.02em;line-height:1}
+.act b{font-size:clamp(15px,1.9vw,20px);font-weight:800;letter-spacing:-.01em;display:block;line-height:1.4}
+.act p{margin:8px 0 0;font-size:13.5px;color:#4C4F57;line-height:1.6;max-width:70ch}
+.act .due{font-family:var(--mono);font-size:12px;font-weight:700;padding:5px 10px;white-space:nowrap;
+  background:var(--mute);color:var(--ink)}
+.act .due.now{background:var(--red);color:#fff!important}
+
+footer{margin-top:clamp(46px,6vw,72px);background:var(--ink);color:#9EA1A9;
+  padding-top:clamp(28px,4vw,44px);padding-bottom:clamp(28px,4vw,44px);font-size:12.5px;line-height:1.75}
+footer .inner{max-width:1200px}
+footer .mono{color:#fff!important}
+footer .warn{color:#fff!important;font-weight:700;display:block;margin-top:14px;font-size:13.5px;
+  border-left:4px solid var(--red);padding-left:14px;line-height:1.6}
+
+/* ================= REVEAL ================= */
+[data-rv]{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s cubic-bezier(.2,.7,.2,1)}
+[data-rv].in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  [data-rv]{opacity:1;transform:none;transition:none}
+  .bar i{animation:none;transform:scaleX(1)}
+}
+
+/* ================= MOBILE ================= */
+@media (max-width:900px){
+  .stats .inner{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-right:0}
+  .stat{border-bottom:1px solid rgba(255,255,255,.16)}
+  .stat:nth-child(3),.stat:nth-child(4){border-bottom:0}
+  .load{grid-template-columns:1fr}
+  .rail{grid-template-columns:1fr 1fr}
+  .mx,.mx tbody,.mx tr,.mx td{display:block;width:100%}
+  .mx thead{display:none}
+  .mx{border-width:0}
+  .mx tbody tr{border:3px solid var(--ink);margin-bottom:14px}
+  .mx td{border:0;border-bottom:1px solid var(--rule)}
+  .mx tr td:last-child{border-bottom:0}
+  .c::before{content:attr(data-l);display:block;font-family:var(--mono);font-size:10.5px;
+    font-weight:700;letter-spacing:.12em;margin-bottom:6px;opacity:.7}
+  .act{grid-template-columns:clamp(44px,10vw,60px) 1fr}
+  .act .due{grid-column:2;justify-self:start;margin-top:10px}
+}
+@media (max-width:560px){ .rail{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<div class="hero band"><div class="inner">
+  <div class="kicker">
+    <b>REGULATION (EU) 2025/40</b>
+    <span>PPWR</span><span>·</span><span>IVDR 2017/746 제조자 관점</span><span>·</span><span>RA 검토 R1</span>
+  </div>
+  <h1>같은 제품, 세 겹의 포장,<br><u>서로 다른 의무</u></h1>
+  <p class="thesis">
+    PPWR은 포장 재질이 아니라 <b>포장이 놓인 자리</b>로 의무를 나눈다.
+    IVD 1차 포장은 재활용성·재생원료 의무에서 빠지지만, 그 바깥의 카턴과 골판지는 아무것도 면제되지 않는다.
+    포장을 하나로 묶어 검토하면 받을 면제를 놓치고, 걸릴 규제를 못 본다.
+  </p>
+</div></div>
+
+<div class="stats band"><div class="inner">
+  <div class="stat hot"><b>2026.08.12</b><small>전면 적용<br>중금속 · SoC · 제조자 의무 · DoC</small></div>
+  <div class="stat hot"><b>2030.01.01</b><small>설계 의무<br>재활용성 · 재생원료 · 최소화 · 빈공간</small></div>
+  <div class="stat"><b>2 / 10</b><small>1차 포장이 받는 완전 면제 조항<br>Art 6 · Art 7</small></div>
+  <div class="stat"><b>5 / 10년</b><small>기술문서 보관<br>일회용 / 재사용 포장</small></div>
+</div></div>
+
+<div class="band"><div class="inner">
+
+<!-- ============ 01 LOAD ============ -->
+<section>
+  <div class="sechead" data-rv><span class="secnum">01</span><h2>포장 계층별 규제 부담</h2></div>
+  <p class="sublede" data-rv>10개 의무 중 몇 개가 걸리는가. 왼쪽에서 오른쪽으로 갈수록 빨강이 진해진다 — 이 기울기가 검토 우선순위다.</p>
+
+  <figure class="layerfig" data-rv>
+    <svg viewBox="0 0 960 640" role="img" aria-label="3차 포장인 골판지 상자 안에 2차 포장인 라벨 부착 카턴들이 들어 있고, 그 카턴을 열면 1차 포장인 파우치·카세트·시약 용기가 나오는 중첩 구조 도해">
+      <!-- 3차 포장: 골판지 상자 -->
+      <polygon points="60,180 60,132 230,132 190,180" fill="none" stroke="currentColor" stroke-width="2.5"/>
+      <polygon points="900,180 900,132 730,132 770,180" fill="none" stroke="currentColor" stroke-width="2.5"/>
+      <rect x="60" y="180" width="840" height="400" rx="8" fill="none" stroke="currentColor" stroke-width="3"/>
+      <rect x="84" y="200" width="216" height="28" rx="4" fill="var(--ink)"/>
+      <text x="94" y="219" class="mono" font-size="13" font-weight="700" fill="#fff">3차 포장 · TIER 3</text>
+      <text x="84" y="248" class="mono" font-size="12" fill="#4C4F57">골판지 상자 · 완충재 · 팔레트 — 운송 단위</text>
+
+      <!-- 2차 포장: 닫힌 카턴 (내용물은 안 보임을 옅은 실루엣으로 암시) -->
+      <rect x="150" y="300" width="250" height="240" rx="6" fill="none" stroke="currentColor" stroke-width="2.5"/>
+      <line x1="150" y1="330" x2="400" y2="330" stroke="currentColor" stroke-width="1.5"/>
+      <rect x="168" y="308" width="70" height="20" rx="2" fill="#fff" stroke="currentColor" stroke-width="1.5"/>
+      <text x="203" y="322" class="mono" text-anchor="middle" font-size="8" fill="currentColor">LABEL</text>
+      <g opacity="0.3">
+        <rect x="190" y="380" width="46" height="80" rx="8" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="3 3"/>
+        <rect x="255" y="390" width="60" height="55" rx="5" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="3 3"/>
+      </g>
+      <text x="203" y="562" class="mono" text-anchor="middle" font-size="11" fill="#4C4F57">2차 포장 (닫힘)</text>
+      <rect x="150" y="276" width="180" height="26" rx="4" fill="var(--ink)"/>
+      <text x="160" y="294" class="mono" font-size="12" font-weight="700" fill="#fff">2차 포장 · TIER 2</text>
+
+      <!-- 2차 포장: 열린 카턴 -->
+      <polygon points="440,290 440,272 540,272 510,290" fill="none" stroke="currentColor" stroke-width="2"/>
+      <polygon points="800,290 800,272 700,272 730,290" fill="none" stroke="currentColor" stroke-width="2"/>
+      <rect x="440" y="290" width="360" height="250" rx="6" fill="none" stroke="currentColor" stroke-width="2.5"/>
+
+      <!-- 1차 포장: 파우치 -->
+      <rect x="470" y="340" width="70" height="110" rx="10" fill="none" stroke="var(--red)" stroke-width="2.5"/>
+      <line x1="470" y1="364" x2="540" y2="364" stroke="var(--red)" stroke-width="2" stroke-dasharray="4 3"/>
+      <text x="505" y="470" class="mono" text-anchor="middle" font-size="11" fill="var(--ink)">파우치</text>
+
+      <!-- 1차 포장: 카세트 -->
+      <rect x="565" y="360" width="95" height="70" rx="6" fill="none" stroke="var(--red)" stroke-width="2.5"/>
+      <rect x="582" y="376" width="26" height="18" rx="2" fill="none" stroke="var(--red)" stroke-width="1.5"/>
+      <rect x="655" y="384" width="14" height="22" rx="2" fill="var(--red)"/>
+      <text x="612" y="470" class="mono" text-anchor="middle" font-size="11" fill="var(--ink)">카세트</text>
+
+      <!-- 1차 포장: 시약 용기 -->
+      <rect x="695" y="340" width="22" height="12" rx="2" fill="var(--red)"/>
+      <rect x="699" y="352" width="14" height="16" fill="none" stroke="var(--red)" stroke-width="2"/>
+      <rect x="684" y="368" width="44" height="78" rx="10" fill="none" stroke="var(--red)" stroke-width="2.5"/>
+      <text x="706" y="470" class="mono" text-anchor="middle" font-size="11" fill="var(--ink)">시약 용기</text>
+
+      <rect x="470" y="484" width="176" height="28" rx="4" fill="var(--red)"/>
+      <text x="480" y="503" class="mono" font-size="12" font-weight="700" fill="#fff">1차 포장 · TIER 1</text>
+      <text x="620" y="562" class="mono" text-anchor="middle" font-size="11" fill="#4C4F57">접촉민감성 — IVDR과 직접 맞닿음</text>
+    </svg>
+    <figcaption>
+      제품과 직접 닿는 <b>1차 포장</b>(파우치·카세트·시약 용기) 여러 개가 라벨이 붙은 <b>2차 포장</b>(카턴)에 담기고,
+      그 카턴들이 완충재와 함께 <b>3차 포장</b>(골판지 상자·팔레트)에 실려 운송된다.
+      안쪽으로 갈수록 IVDR 접촉민감성 규정이 우선하고, 바깥으로 갈수록 PPWR의 재활용·재사용 의무가 그대로 적용된다.
+    </figcaption>
+  </figure>
+
+  <div class="load">
+    <div class="lp l1" data-rv>
+      <span class="tier">TIER 1 · PRIMARY</span>
+      <span class="name">1차 포장</span>
+      <span class="what">파우치 · 카세트 포장 · 시약 용기</span>
+      <span class="score">4<s>/10</s></span>
+      <span class="lbl">적용 4 · 조건부 1 · 면제 2 · 미해당 3</span>
+      <div class="bar"><i class="fa" style="width:40%;animation-delay:.05s"></i><i class="fc" style="width:10%;animation-delay:.2s"></i></div>
+      <p class="note">접촉민감성 포장으로 Art 6·7에서 빠지는 유일한 계층. 대신 면제 근거를 기술문서에 써야 한다.</p>
+    </div>
+    <div class="lp l2" data-rv>
+      <span class="tier">TIER 2 · SECONDARY</span>
+      <span class="name">2차 포장</span>
+      <span class="what">제품 박스 · 라벨 부착 카턴</span>
+      <span class="score">7<s>/10</s></span>
+      <span class="lbl">적용 7 · 조건부 2 · 면제 0 · 미해당 1</span>
+      <div class="bar"><i class="fa" style="width:70%;animation-delay:.15s"></i><i class="fc" style="width:20%;animation-delay:.3s"></i></div>
+      <p class="note">IVD 면제가 하나도 없다. 2028년 라벨, 2030년 설계 — 아트워크 개정 리드타임을 역산해야 한다.</p>
+    </div>
+    <div class="lp l3" data-rv>
+      <span class="tier">TIER 3 · TRANSPORT</span>
+      <span class="name">3차 포장</span>
+      <span class="what">골판지 · 완충재 · 팔레트</span>
+      <span class="score">8<s>/10</s></span>
+      <span class="lbl">적용 8 · 조건부 0 · 면제 0 · 미해당 2</span>
+      <div class="bar"><i class="fa" style="width:80%;animation-delay:.25s"></i></div>
+      <p class="note">부담이 가장 큰데 검토서에서 가장 적게 다뤄진 계층. 빈공간 50% 상한 + 재사용 목표 40%가 동시에 걸린다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 MATRIX ============ -->
+<section>
+  <div class="sechead" data-rv><span class="secnum">02</span><h2>적용·면제 매트릭스</h2></div>
+  <p class="sublede" data-rv>행은 의무, 열은 포장 계층. 빨간 칸이 해야 할 일이다.</p>
+
+  <div class="legend" data-rv>
+    <span><i class="lg-a"></i>적용</span>
+    <span><i class="lg-cd"></i>조건부 · 판단 필요</span>
+    <span><i class="lg-e"></i>면제 · 근거 문서화 필요</span>
+    <span><i class="lg-n"></i>미해당</span>
+  </div>
+
+  <table class="mx">
+    <thead><tr>
+      <th class="duty"><span class="h">의무</span><span class="s">ARTICLE · 적용 시점</span></th>
+      <th class="c"><span class="h">1차 포장</span><span class="s">POUCH · CASSETTE</span></th>
+      <th class="c"><span class="h">2차 포장</span><span class="s">CARTON</span></th>
+      <th class="c hot"><span class="h">3차 포장</span><span class="s">CORRUGATE · PALLET</span></th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td class="duty"><b>중금속 합 100 mg/kg</b><span class="art">Art 5(4)</span><span class="when soon">2026.08.12</span></td>
+        <td class="c a" data-l="1차"><span class="v">적용</span><p class="nt">Pb+Cd+Hg+Cr(VI). 면제 없음. 공급업체 CoA 필수.</p></td>
+        <td class="c a" data-l="2차"><span class="v">적용</span><p class="nt">기존 PPWD와 동일 수준 — 신규 부담 아님.</p></td>
+        <td class="c a" data-l="3차"><span class="v">적용</span><p class="nt">시험법은 CEN CR 13695-1 권장.</p></td>
+      </tr>
+      <tr>
+        <td class="duty"><b>PFAS 농도 한도</b><span class="art">Art 5(5)</span><span class="when soon">2026.08.12</span></td>
+        <td class="c n" data-l="1차"><span class="v">미해당</span><p class="nt">원문은 <b>food-contact packaging</b> 한정. IVD는 대상 아님.</p></td>
+        <td class="c n" data-l="2차"><span class="v">미해당</span><p class="nt">25 ppb / 250 ppb / 50 ppm은 식품접촉재 기준.</p></td>
+        <td class="c n" data-l="3차"><span class="v">미해당</span><p class="nt">향후 REACH 보편 제한은 별도로 추적 필요.</p></td>
+      </tr>
+      <tr>
+        <td class="duty"><b>SoC 최소화</b><span class="art">Art 5(1)</span><span class="when soon">2026.08.12</span></td>
+        <td class="c a" data-l="1차"><span class="v">적용</span><p class="nt">농도 한도 없는 원칙 의무. 입증은 EN 13428 Annex C(잠정).</p></td>
+        <td class="c a" data-l="2차"><span class="v">적용</span><p class="nt">잉크·접착제·바니시까지 포장 단위 전체 기준.</p></td>
+        <td class="c a" data-l="3차"><span class="v">적용</span><p class="nt">ECHA 물질 목록 작업 중 — 확정 시 재검토.</p></td>
+      </tr>
+      <tr>
+        <td class="duty"><b>재활용 가능성 등급</b><span class="art">Art 6</span><span class="when">2030.01.01</span></td>
+        <td class="c e" data-l="1차"><span class="v">면제</span><p class="nt">Art 6(11)(c) — IVD 접촉민감성 포장. 재질 한정어 없음.</p></td>
+        <td class="c a" data-l="2차"><span class="v">적용</span><p class="nt">D등급 2030 퇴출, 2038부터 A·B등급만 출시 가능.</p></td>
+        <td class="c a" data-l="3차"><span class="v">적용</span><p class="nt">DfR 위임법 2028.01 채택 예정 → +24개월 후 구속력.</p></td>
+      </tr>
+      <tr>
+        <td class="duty"><b>재생원료 함량</b><span class="art">Art 7</span><span class="when">2030.01.01</span></td>
+        <td class="c e" data-l="1차"><span class="v">면제</span><p class="nt">Art 7(4)(c) — 접촉민감성 <b>플라스틱</b> 한정 면제.</p></td>
+        <td class="c a" data-l="2차"><span class="v">적용</span><p class="nt">플라스틱부 35%(2030)→65%(2040). 5% 미만 부품 제외.</p></td>
+        <td class="c a" data-l="3차"><span class="v">적용</span><p class="nt">스트레치 랩·플라스틱 상자 해당. 골판지는 비플라스틱.</p></td>
+      </tr>
+      <tr>
+        <td class="duty"><b>포장 최소화</b><span class="art">Art 10</span><span class="when">2030.01.01</span></td>
+        <td class="c a" data-l="1차"><span class="v">적용</span><p class="nt">면제 없음. IVD 기능·안정성 근거는 정당화 사유가 됨.</p></td>
+        <td class="c a" data-l="2차"><span class="v">적용</span><p class="nt">이중벽·가짜바닥 금지. 기능 필요성을 기술문서로 입증.</p></td>
+        <td class="c a" data-l="3차"><span class="v">적용</span><p class="nt">2029년까지는 기존 EN 13428:2004가 유효.</p></td>
+      </tr>
+      <tr>
+        <td class="duty"><b>조화 재질 라벨</b><span class="art">Art 12(1)</span><span class="when">2028.08.12</span></td>
+        <td class="c cd" data-l="1차"><span class="v">조건부 면제</span><p class="nt">Art 12(11) — IVDR 의무표시로 공간 부족·안전 저해 시 미적용.</p></td>
+        <td class="c a" data-l="2차"><span class="v">적용</span><p class="nt">픽토그램 + QR. 아트워크 개정 리드타임 역산 필요.</p></td>
+        <td class="c n" data-l="3차"><span class="v">미해당</span><p class="nt">운송포장·DRS 대상은 재질 라벨 대상에서 제외.</p></td>
+      </tr>
+      <tr>
+        <td class="duty"><b>빈공간 비율 ≤ 50%</b><span class="art">Art 24</span><span class="when">2030.01.01</span></td>
+        <td class="c n" data-l="1차"><span class="v">미해당</span><p class="nt">판매포장은 수치 상한 없음 — Art 10 최소화로 흡수.</p></td>
+        <td class="c cd" data-l="2차"><span class="v">조건부</span><p class="nt">묶음포장이면 50% 적용, 판매포장이면 상한 없음.</p></td>
+        <td class="c a" data-l="3차"><span class="v">적용</span><p class="nt">완충재·에어쿠션·폼 필러가 채운 공간도 빈공간으로 산정.</p></td>
+      </tr>
+      <tr>
+        <td class="duty"><b>재사용 목표</b><span class="art">Art 29</span><span class="when">2030.01.01</span></td>
+        <td class="c n" data-l="1차"><span class="v">미해당</span><p class="nt">대상 포맷 목록(Art 29(1))에 없음.</p></td>
+        <td class="c cd" data-l="2차"><span class="v">조건부</span><p class="nt">판지 외 상자형 집합포장이면 10%(2040년 25%).</p></td>
+        <td class="c a" data-l="3차"><span class="v">적용</span><p class="nt">팔레트·랩·스트랩 40%(2040년 70%). 골판지 박스는 면제.</p></td>
+      </tr>
+      <tr>
+        <td class="duty"><b>EPR 등록·보고</b><span class="art">Art 44–45</span><span class="when">2027 – 2030</span></td>
+        <td class="c a" data-l="1차"><span class="v">적용</span><p class="nt">면제 조항과 무관. 모든 포장이 EPR 대상.</p></td>
+        <td class="c a" data-l="2차"><span class="v">적용</span><p class="nt">회원국별 개별 등록. 역외 생산자는 공인대리인 지정 필수.</p></td>
+        <td class="c a" data-l="3차"><span class="v">적용</span><p class="nt">조화 규칙 기준 최초 보고 2030.06.01.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============ 03 TIMELINE ============ -->
+<section>
+  <div class="sechead" data-rv><span class="secnum">03</span><h2>두 개의 마감</h2></div>
+  <p class="sublede" data-rv>2026년은 문서의 마감, 2030년은 설계의 마감. 사이의 2027–2028년에 위임법·시행령이 확정되므로 설계 변경은 그때 확정안을 보고 착수하는 게 합리적이다.</p>
+  <div class="rail" data-rv>
+    <div class="mk hot"><span class="d">2026.08.12</span><span class="l">전면 적용. 중금속·SoC·제조자/수입자 의무, DoC·기술문서 발효</span></div>
+    <div class="mk"><span class="d">2027.02.12</span><span class="l">EPR 디지털 표시. 포장 금지(Annex V) 가이드라인 공표</span></div>
+    <div class="mk"><span class="d">2028.01</span><span class="l">DfR 위임법 채택 예정 — 재활용성 등급 기준 확정</span></div>
+    <div class="mk"><span class="d">2028.08.12</span><span class="l">조화 재질 라벨. 2차 포장 아트워크 개정 데드라인</span></div>
+    <div class="mk hot"><span class="d">2030.01.01</span><span class="l">재활용성 · 재생원료 · 최소화 · 빈공간 · 재사용 목표 동시 발효</span></div>
+    <div class="mk"><span class="d">2038 / 2040</span><span class="l">A·B등급만 출시 허용(2038) · 재생원료·재사용 목표 상향(2040)</span></div>
+  </div>
+</section>
+
+<!-- ============ 04 MYTHS ============ -->
+<section>
+  <div class="sechead" data-rv><span class="secnum">04</span><h2>자주 어긋나는 세 지점</h2></div>
+  <p class="sublede" data-rv>원문 조항과 요약본 사이에서 실제로 해석이 갈렸던 항목.</p>
+  <div class="cards">
+    <div class="card" data-rv>
+      <span class="x">✕</span>
+      <div class="myth">"PFAS 25 ppb가 우리 포장에도 걸린다"</div>
+      <div class="fact">Art 5(5)는 식품접촉 포장에만 적용된다</div>
+      <p>원문은 "food-contact packaging shall not be placed on the market…". IVD 포장은 이 한도의 대상이 아니다. 다만 Art 5(1) SoC 최소화와 Art 5(4) 중금속 한도는 그대로 적용된다.</p>
+      <div class="src">Art 5(5) · FAQ III-12</div>
+    </div>
+    <div class="card" data-rv>
+      <span class="x">✕</span>
+      <div class="myth">"면제 대상이면 문서도 필요 없다"</div>
+      <div class="fact">면제는 요구사항 면제지, 문서 면제가 아니다</div>
+      <p>Art 6·7 면제를 받아도 적합성평가·DoC·Annex VII 기술문서 의무는 남는다. 면제 조항과 근거를 기술문서에 명시해야 하며, 기술문서 작성 의무는 대리인에게 위임할 수 없다.</p>
+      <div class="src">FAQ XV-6 · X-9 · Annex VII</div>
+    </div>
+    <div class="card" data-rv>
+      <span class="x">✕</span>
+      <div class="myth">"포장 규제는 포장재 업체 책임이다"</div>
+      <div class="fact">상표가 붙는 순간 우리가 manufacturer다</div>
+      <p>상표·명칭이 있으면 그 소유자가, 없으면 발주·설계사양을 정한 쪽이 제조자다. 주문제작 운송포장도 발주자가 제조자. 공급자는 정보 제공 의무만 지며(Art 16, 거부 불가) 법적 책임은 계약으로 이전되지 않는다.</p>
+      <div class="src">Art 3(1)(12) · FAQ II-6 · X-9 · X-14</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 ACTIONS ============ -->
+<section>
+  <div class="sechead" data-rv><span class="secnum">05</span><h2>액션</h2></div>
+  <p class="sublede" data-rv>면제 여부와 무관하게 2026.08.12까지 필요한 것부터.</p>
+  <div class="acts">
+    <div class="act" data-rv><div class="k">A1</div>
+      <div><b>공급업체 물질정보 확보</b><p>포장재별 중금속 함량·재질 구성·시험성적서. Art 16이 공급자의 제공 의무 근거이므로 계약서에 인용해 요청.</p></div>
+      <div class="due now">2026.08</div></div>
+    <div class="act" data-rv><div class="k">A2</div>
+      <div><b>포장 계층 확정 · 제조자 지위 정리</b><p>1·2·3차를 PPWR 용어(sales / grouped / transport)로 재매핑. 당사 상표 부착 포장은 당사가 manufacturer임을 문서화.</p></div>
+      <div class="due now">2026.08</div></div>
+    <div class="act" data-rv><div class="k">A3</div>
+      <div><b>Annex VII 기술문서 · DoC 템플릿 구축</b><p>IVDR Technical File과 분리 관리하되 상호 참조. 면제 조항(6(11)(c) · 7(4)(c) · 12(11))의 인용과 근거 필드를 포함.</p></div>
+      <div class="due now">2026.08</div></div>
+    <div class="act" data-rv><div class="k">A4</div>
+      <div><b>수출 회원국별 EPR 등록 현황 조사</b><p>등록 방식·요구 문서가 회원국마다 상이. 역외 생산자이므로 국가별 공인대리인 지정 필요 여부를 함께 확인.</p></div>
+      <div class="due">2027.02</div></div>
+    <div class="act" data-rv><div class="k">A5</div>
+      <div><b>3차 포장 빈공간 실측 · 완충 설계 재검토</b><p>완충재가 채운 공간도 빈공간으로 산정되므로 현행 설계가 50% 상한에 걸릴 수 있음. 실측 후 ISTA 3A 재수행 범위 판단.</p></div>
+      <div class="due">2028</div></div>
+    <div class="act" data-rv><div class="k">A6</div>
+      <div><b>2차 포장 아트워크 개정 계획</b><p>조화 재질 라벨 + QR. 시행령이 2026.08까지 채택 예정이므로 확정 후 착수, 2028.08 데드라인 역산.</p></div>
+      <div class="due">2028.08</div></div>
+  </div>
+</section>
+
+</div></div>
+
+<footer class="band"><div class="inner">
+  출처 — <span class="mono">Regulation (EU) 2025/40</span> 원문(OJ L, 22.1.2025) ·
+  European Commission DG ENV <span class="mono">PPWR FAQ 2nd edition</span>(August 2026) ·
+  사내 RA 검토서 <span class="mono">2026.05.29 / R1</span>
+  <span class="warn">면제 판단은 당사 포장이 IVDR 2017/746 상 접촉민감성 포장에 해당한다는 전제에 의존한다. 계층 분류가 바뀌면 매트릭스 전체가 바뀐다. DfR 위임법·산정 시행령 확정 전이므로 2030년 조항의 세부 기준은 변동 가능.</span>
+</div></footer>
+
+<script>
+(function(){
+  var rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('[data-rv]');
+  if (rm || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var sibs = Array.prototype.slice.call(en.target.parentNode.querySelectorAll('[data-rv]'));
+      en.target.style.transitionDelay = Math.min(sibs.indexOf(en.target), 5) * 70 + 'ms';
+      en.target.classList.add('in');
+      io.unobserve(en.target);
+    });
+  }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
