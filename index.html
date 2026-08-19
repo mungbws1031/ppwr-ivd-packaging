@@ -13,9 +13,9 @@
 <style>
 :root{
   color-scheme:light only;
-  --red:#E60044;
-  --red-pale:#FFDDE7;
-  --red-deep:#B00035;
+  --red:#A6444F;
+  --red-pale:#F3E2E4;
+  --red-deep:#6B222C;
   --ink:#101114;
   --gray:#727171;
   --mute:#F1F0EC;
@@ -348,6 +348,121 @@ footer .warn{color:#fff!important;font-weight:700;display:block;margin-top:14px;
 <section>
   <div class="sechead" data-rv><span class="secnum">02</span><h2>적용·면제 매트릭스</h2></div>
   <p class="sublede" data-rv>행은 의무, 열은 포장 계층. 빨간 칸이 해야 할 일이다.</p>
+
+  <figure class="layerfig" data-rv>
+    <svg viewBox="0 0 900 520" role="img" aria-label="10개 의무 × 3개 포장 계층 매트릭스를 축소한 패턴 요약. 1차 포장 열에 흰색·회색 칸이 몰려 있고 3차 포장 열은 거의 전부 진한 칸이라, 왼쪽에서 오른쪽으로 갈수록 규제 부담이 짙어지는 패턴이 한눈에 보인다">
+      <g stroke-linejoin="round" stroke-linecap="round">
+        <!-- 범례 -->
+        <rect x="60" y="24" width="16" height="16" fill="var(--red)"/>
+        <text x="84" y="37" font-size="12" fill="var(--ink)">적용</text>
+        <rect x="160" y="24" width="16" height="16" fill="var(--red-pale)"/>
+        <text x="184" y="37" font-size="12" fill="var(--ink)">조건부</text>
+        <rect x="272" y="24" width="16" height="16" fill="#fff" stroke="currentColor" stroke-width="2"/>
+        <text x="296" y="37" font-size="12" fill="var(--ink)">면제</text>
+        <rect x="372" y="24" width="16" height="16" fill="var(--mute)"/>
+        <text x="396" y="37" font-size="12" fill="var(--ink)">미해당</text>
+
+        <!-- 열 헤더 -->
+        <text x="302" y="76" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">1차</text>
+        <text x="494" y="76" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">2차</text>
+        <text x="686" y="76" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">3차</text>
+
+        <!-- 행 1: 중금속 · A A A -->
+        <text x="196" y="112" text-anchor="end" font-size="12" fill="#4C4F57">Art 5(4)</text>
+        <rect x="212" y="92" width="180" height="32" rx="4" fill="var(--red)"/>
+        <text x="302" y="113" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">적용</text>
+        <rect x="404" y="92" width="180" height="32" rx="4" fill="var(--red)"/>
+        <text x="494" y="113" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">적용</text>
+        <rect x="596" y="92" width="180" height="32" rx="4" fill="var(--red)"/>
+        <text x="686" y="113" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">적용</text>
+
+        <!-- 행 2: PFAS · N N N -->
+        <text x="196" y="152" text-anchor="end" font-size="12" fill="#4C4F57">Art 5(5)</text>
+        <rect x="212" y="132" width="180" height="32" rx="4" fill="var(--mute)"/>
+        <text x="302" y="153" text-anchor="middle" font-size="12" font-weight="700" fill="#6B6A64">미해당</text>
+        <rect x="404" y="132" width="180" height="32" rx="4" fill="var(--mute)"/>
+        <text x="494" y="153" text-anchor="middle" font-size="12" font-weight="700" fill="#6B6A64">미해당</text>
+        <rect x="596" y="132" width="180" height="32" rx="4" fill="var(--mute)"/>
+        <text x="686" y="153" text-anchor="middle" font-size="12" font-weight="700" fill="#6B6A64">미해당</text>
+
+        <!-- 행 3: SoC · A A A -->
+        <text x="196" y="192" text-anchor="end" font-size="12" fill="#4C4F57">Art 5(1)</text>
+        <rect x="212" y="172" width="180" height="32" rx="4" fill="var(--red)"/>
+        <text x="302" y="193" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">적용</text>
+        <rect x="404" y="172" width="180" height="32" rx="4" fill="var(--red)"/>
+        <text x="494" y="193" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">적용</text>
+        <rect x="596" y="172" width="180" height="32" rx="4" fill="var(--red)"/>
+        <text x="686" y="193" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">적용</text>
+
+        <!-- 행 4: 재활용등급 · E A A -->
+        <text x="196" y="232" text-anchor="end" font-size="12" fill="#4C4F57">Art 6</text>
+        <rect x="212" y="212" width="180" height="32" rx="4" fill="#fff" stroke="currentColor" stroke-width="2"/>
+        <text x="302" y="233" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">면제</text>
+        <rect x="404" y="212" width="180" height="32" rx="4" fill="var(--red)"/>
+        <text x="494" y="233" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">적용</text>
+        <rect x="596" y="212" width="180" height="32" rx="4" fill="var(--red)"/>
+        <text x="686" y="233" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">적용</text>
+
+        <!-- 행 5: 재생원료 · E A A -->
+        <text x="196" y="272" text-anchor="end" font-size="12" fill="#4C4F57">Art 7</text>
+        <rect x="212" y="252" width="180" height="32" rx="4" fill="#fff" stroke="currentColor" stroke-width="2"/>
+        <text x="302" y="273" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">면제</text>
+        <rect x="404" y="252" width="180" height="32" rx="4" fill="var(--red)"/>
+        <text x="494" y="273" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">적용</text>
+        <rect x="596" y="252" width="180" height="32" rx="4" fill="var(--red)"/>
+        <text x="686" y="273" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">적용</text>
+
+        <!-- 행 6: 포장최소화 · A A A -->
+        <text x="196" y="312" text-anchor="end" font-size="12" fill="#4C4F57">Art 10</text>
+        <rect x="212" y="292" width="180" height="32" rx="4" fill="var(--red)"/>
+        <text x="302" y="313" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">적용</text>
+        <rect x="404" y="292" width="180" height="32" rx="4" fill="var(--red)"/>
+        <text x="494" y="313" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">적용</text>
+        <rect x="596" y="292" width="180" height="32" rx="4" fill="var(--red)"/>
+        <text x="686" y="313" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">적용</text>
+
+        <!-- 행 7: 재질라벨 · CD A N -->
+        <text x="196" y="352" text-anchor="end" font-size="12" fill="#4C4F57">Art 12(1)</text>
+        <rect x="212" y="332" width="180" height="32" rx="4" fill="var(--red-pale)"/>
+        <text x="302" y="353" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">조건부</text>
+        <rect x="404" y="332" width="180" height="32" rx="4" fill="var(--red)"/>
+        <text x="494" y="353" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">적용</text>
+        <rect x="596" y="332" width="180" height="32" rx="4" fill="var(--mute)"/>
+        <text x="686" y="353" text-anchor="middle" font-size="12" font-weight="700" fill="#6B6A64">미해당</text>
+
+        <!-- 행 8: 빈공간 · N CD A -->
+        <text x="196" y="392" text-anchor="end" font-size="12" fill="#4C4F57">Art 24</text>
+        <rect x="212" y="372" width="180" height="32" rx="4" fill="var(--mute)"/>
+        <text x="302" y="393" text-anchor="middle" font-size="12" font-weight="700" fill="#6B6A64">미해당</text>
+        <rect x="404" y="372" width="180" height="32" rx="4" fill="var(--red-pale)"/>
+        <text x="494" y="393" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">조건부</text>
+        <rect x="596" y="372" width="180" height="32" rx="4" fill="var(--red)"/>
+        <text x="686" y="393" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">적용</text>
+
+        <!-- 행 9: 재사용목표 · N CD A -->
+        <text x="196" y="432" text-anchor="end" font-size="12" fill="#4C4F57">Art 29</text>
+        <rect x="212" y="412" width="180" height="32" rx="4" fill="var(--mute)"/>
+        <text x="302" y="433" text-anchor="middle" font-size="12" font-weight="700" fill="#6B6A64">미해당</text>
+        <rect x="404" y="412" width="180" height="32" rx="4" fill="var(--red-pale)"/>
+        <text x="494" y="433" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">조건부</text>
+        <rect x="596" y="412" width="180" height="32" rx="4" fill="var(--red)"/>
+        <text x="686" y="433" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">적용</text>
+
+        <!-- 행 10: EPR · A A A -->
+        <text x="196" y="472" text-anchor="end" font-size="12" fill="#4C4F57">Art 44–45</text>
+        <rect x="212" y="452" width="180" height="32" rx="4" fill="var(--red)"/>
+        <text x="302" y="473" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">적용</text>
+        <rect x="404" y="452" width="180" height="32" rx="4" fill="var(--red)"/>
+        <text x="494" y="473" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">적용</text>
+        <rect x="596" y="452" width="180" height="32" rx="4" fill="var(--red)"/>
+        <text x="686" y="473" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">적용</text>
+      </g>
+    </svg>
+    <figcaption>
+      아래 표와 같은 10행 × 3열이지만 글자를 지우고 색만 남기면 패턴이 보인다 — <b>1차 포장</b> 열에 흰색·회색이
+      몰려 있고 <b>3차 포장</b> 열은 거의 전부 채워져 있다. 세로로 읽으면 계층별 부담이, 가로로 읽으면 의무별 적용 범위가 드러난다.
+    </figcaption>
+  </figure>
 
   <div class="legend" data-rv>
     <span><i class="lg-a"></i>적용</span>
