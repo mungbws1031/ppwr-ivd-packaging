@@ -433,6 +433,67 @@ footer .warn{color:#fff!important;font-weight:700;display:block;margin-top:14px;
 <section>
   <div class="sechead" data-rv><span class="secnum">03</span><h2>두 개의 마감</h2></div>
   <p class="sublede" data-rv>2026년은 문서의 마감, 2030년은 설계의 마감. 사이의 2027–2028년에 위임법·시행령이 확정되므로 설계 변경은 그때 확정안을 보고 착수하는 게 합리적이다.</p>
+
+  <figure class="layerfig" data-rv>
+    <svg viewBox="0 0 1000 300" role="img" aria-label="2026년 8월 12일 문서 마감과 2030년 1월 1일 설계 마감이라는 두 개의 큰 마감 사이에, 2027~2028년 위임법·시행령 확정 구간이 있고 그 뒤로 2038·2040년의 불확실한 상향 구간이 점선으로 이어지는 타임라인">
+      <g stroke-linejoin="round" stroke-linecap="round">
+        <!-- 확정 구간 브래킷 -->
+        <path d="M236,86 h352 M236,86 v18 M588,86 v18" fill="none" stroke="currentColor" stroke-width="2"/>
+        <text x="412" y="70" class="mono" text-anchor="middle" font-size="11" fill="var(--ink)">위임법 · 시행령 확정 구간</text>
+
+        <!-- 두 마감 칩 -->
+        <rect x="60" y="40" width="150" height="26" rx="4" fill="var(--red)"/>
+        <text x="72" y="58" class="mono" font-size="12" font-weight="700" fill="#fff">문서의 마감</text>
+        <rect x="754" y="40" width="150" height="26" rx="4" fill="var(--red)"/>
+        <text x="766" y="58" class="mono" font-size="12" font-weight="700" fill="#fff">설계의 마감</text>
+
+        <!-- 축 -->
+        <line x1="60" y1="180" x2="764" y2="180" stroke="currentColor" stroke-width="3"/>
+        <line x1="764" y1="180" x2="915" y2="180" stroke="currentColor" stroke-width="3" stroke-dasharray="7 6"/>
+
+        <!-- 마디: 2026.08.12 (앵커) -->
+        <circle cx="60" cy="180" r="14" fill="var(--red)"/>
+        <line x1="60" y1="194" x2="60" y2="212" stroke="currentColor" stroke-width="1.5"/>
+        <text x="60" y="234" class="mono" text-anchor="middle" font-size="15" font-weight="800" fill="var(--red)">2026.08.12</text>
+        <text x="60" y="254" class="mono" text-anchor="middle" font-size="11" fill="#4C4F57">전면 적용</text>
+
+        <!-- 마디: 2027.02.12 -->
+        <circle cx="236" cy="180" r="8" fill="#fff" stroke="currentColor" stroke-width="2.5"/>
+        <line x1="236" y1="188" x2="236" y2="212" stroke="currentColor" stroke-width="1.5"/>
+        <text x="236" y="230" class="mono" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">2027.02.12</text>
+        <text x="236" y="250" class="mono" text-anchor="middle" font-size="11" fill="#4C4F57">EPR 디지털 표시</text>
+
+        <!-- 마디: 2028.01 -->
+        <circle cx="412" cy="180" r="8" fill="#fff" stroke="currentColor" stroke-width="2.5"/>
+        <line x1="412" y1="188" x2="412" y2="212" stroke="currentColor" stroke-width="1.5"/>
+        <text x="412" y="230" class="mono" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">2028.01</text>
+        <text x="412" y="250" class="mono" text-anchor="middle" font-size="11" fill="#4C4F57">DfR 위임법 채택</text>
+
+        <!-- 마디: 2028.08.12 -->
+        <circle cx="588" cy="180" r="8" fill="#fff" stroke="currentColor" stroke-width="2.5"/>
+        <line x1="588" y1="188" x2="588" y2="212" stroke="currentColor" stroke-width="1.5"/>
+        <text x="588" y="230" class="mono" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">2028.08.12</text>
+        <text x="588" y="250" class="mono" text-anchor="middle" font-size="11" fill="#4C4F57">재질 라벨 발효</text>
+
+        <!-- 마디: 2030.01.01 (앵커) -->
+        <circle cx="764" cy="180" r="14" fill="var(--red)"/>
+        <line x1="764" y1="194" x2="764" y2="212" stroke="currentColor" stroke-width="1.5"/>
+        <text x="764" y="234" class="mono" text-anchor="middle" font-size="15" font-weight="800" fill="var(--red)">2030.01.01</text>
+        <text x="764" y="254" class="mono" text-anchor="middle" font-size="11" fill="#4C4F57">설계 의무 발효</text>
+
+        <!-- 마디: 2038 / 2040 (불확실 구간) -->
+        <circle cx="915" cy="180" r="8" fill="#fff" stroke="currentColor" stroke-width="2.5" stroke-dasharray="3 2"/>
+        <line x1="915" y1="188" x2="915" y2="212" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2"/>
+        <text x="915" y="230" class="mono" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">2038/2040</text>
+        <text x="915" y="250" class="mono" text-anchor="middle" font-size="11" fill="#4C4F57">등급·비율 상향</text>
+      </g>
+    </svg>
+    <figcaption>
+      빨간 마디 두 개(<b>2026.08.12</b>, <b>2030.01.01</b>)가 실제 마감이고, 그 사이 세 마디는 마감이 아니라
+      위임법·시행령이 순차로 확정되는 과정이다. 오른쪽 점선 구간(2038·2040)은 아직 세부 기준이 없어 실선과 구분했다.
+    </figcaption>
+  </figure>
+
   <div class="rail" data-rv>
     <div class="mk hot"><span class="d">2026.08.12</span><span class="l">전면 적용. 중금속·SoC·제조자/수입자 의무, DoC·기술문서 발효</span></div>
     <div class="mk"><span class="d">2027.02.12</span><span class="l">EPR 디지털 표시. 포장 금지(Annex V) 가이드라인 공표</span></div>
