@@ -510,6 +510,63 @@ footer .warn{color:#fff!important;font-weight:700;display:block;margin-top:14px;
 <section>
   <div class="sechead" data-rv><span class="secnum">04</span><h2>자주 어긋나는 세 지점</h2></div>
   <p class="sublede" data-rv>원문 조항과 요약본 사이에서 실제로 해석이 갈렸던 항목.</p>
+
+  <figure class="layerfig" data-rv>
+    <svg viewBox="0 0 1000 500" role="img" aria-label="포장재 업체가 아니라 우리가 manufacturer인지 판별하는 순서도 — 먼저 자사 상표·명칭이 부착되는지 확인하고, 아니라면 발주·설계사양을 자사가 정했는지 확인한다. 두 질문 중 하나라도 예이면 자사가 manufacturer다">
+      <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+        </marker>
+      </defs>
+      <g stroke-linejoin="round" stroke-linecap="round">
+        <!-- 연결선 -->
+        <path d="M500,80 V104 H180 V156" fill="none" stroke="currentColor" stroke-width="2" marker-end="url(#arrow)"/>
+        <path d="M500,80 V104 H580 V156" fill="none" stroke="currentColor" stroke-width="2" marker-end="url(#arrow)"/>
+        <path d="M580,224 V248 H556 V292" fill="none" stroke="currentColor" stroke-width="2" marker-end="url(#arrow)"/>
+        <path d="M580,224 V248 H820 V292" fill="none" stroke="currentColor" stroke-width="2" marker-end="url(#arrow)"/>
+        <text x="336" y="96" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">예</text>
+        <text x="544" y="96" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">아니오</text>
+        <text x="564" y="240" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">예</text>
+        <text x="704" y="240" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">아니오</text>
+
+        <!-- Q1 -->
+        <rect x="352" y="24" width="296" height="56" rx="8" fill="#fff" stroke="currentColor" stroke-width="2"/>
+        <text x="500" y="57" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">포장에 자사 상표·명칭이 있는가?</text>
+
+        <!-- Leaf A: Q1 = 예 -->
+        <rect x="52" y="160" width="256" height="64" rx="8" fill="var(--red-deep)"/>
+        <text x="180" y="188" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">자사 = MANUFACTURER</text>
+        <text x="180" y="208" text-anchor="middle" font-size="11" fill="#fff">상표·명칭 소유 근거 · Art 3(1)(12)</text>
+
+        <!-- Q2 -->
+        <rect x="432" y="160" width="296" height="64" rx="8" fill="#fff" stroke="currentColor" stroke-width="2"/>
+        <text x="580" y="188" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">발주·설계사양을 자사가 정했는가?</text>
+        <text x="580" y="208" text-anchor="middle" font-size="11" fill="#4C4F57">(주문제작 운송포장 포함)</text>
+
+        <!-- Leaf B: Q2 = 예 -->
+        <rect x="428" y="296" width="256" height="64" rx="8" fill="var(--red-deep)"/>
+        <text x="556" y="324" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">자사 = MANUFACTURER</text>
+        <text x="556" y="344" text-anchor="middle" font-size="11" fill="#fff">사양 지정 근거 · Art 3(1)(12)</text>
+
+        <!-- Leaf C: Q2 = 아니오 -->
+        <rect x="692" y="296" width="256" height="64" rx="8" fill="var(--mute)" stroke="currentColor" stroke-width="2"/>
+        <text x="820" y="324" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">제3자 = MANUFACTURER</text>
+        <text x="820" y="344" text-anchor="middle" font-size="11" fill="#4C4F57">당사는 제조자 아님</text>
+
+        <!-- 참고: 공급자 의무 -->
+        <rect x="64" y="404" width="872" height="72" rx="8" fill="#fff" stroke="var(--gray)" stroke-width="2" stroke-dasharray="6 4"/>
+        <rect x="80" y="416" width="96" height="24" rx="4" fill="var(--ink)"/>
+        <text x="128" y="433" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">참고 · Art 16</text>
+        <text x="80" y="456" font-size="12" fill="var(--ink)">포장재 공급업체는 정보 제공 의무만 진다 (거부 불가) —</text>
+        <text x="80" y="472" font-size="12" fill="var(--ink)">법적 책임은 계약으로 공급업체에 이전되지 않는다.</text>
+      </g>
+    </svg>
+    <figcaption>
+      두 질문 중 하나라도 "예"면 <b>당사가 manufacturer</b>다. 상표·명칭이 없어도 발주·설계사양을 정했다면 책임은 여전히
+      당사에 있다 — 포장재 업체는 정보를 제공할 뿐, 계약으로도 그 책임을 대신 지지 않는다.
+    </figcaption>
+  </figure>
+
   <div class="cards">
     <div class="card" data-rv>
       <span class="x">✕</span>
